@@ -1,2 +1,2 @@
 # Plat-former
-http://localhost/Plat-former/
+http://localhost/Platformer/
