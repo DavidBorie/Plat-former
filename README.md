@@ -1,2 +1,1 @@
-# Plat-former
-http://localhost/Platformer/
+ https://maxime-balansard.github.io/platformer/.
