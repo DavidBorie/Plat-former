@@ -1,1 +1,1 @@
- https://maxime-balansard.github.io/platformer/.
+ https://DavidBorie.github.io/Platformer/.
