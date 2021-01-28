@@ -24,7 +24,7 @@ class Tableau07 extends Tableau{
         for(let i=1 ;i<=3;i++){
             let plateforme=this.platforms.create(largeur*i ,i*64+150,"ground");
             plateforme.setOrigin(0,0);
-            plateforme.setDisplaySize(64,8);
+            plateforme.setDisplaySize(100,8);
             plateforme.body.allowGravity=false;
             plateforme.setBounceX(1);
             plateforme.setCollideWorldBounds(true);
