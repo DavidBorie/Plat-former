@@ -9,7 +9,7 @@ class Tableau06 extends Tableau{
     create() {
         super.create();
         //quelques étoiles
-        let largeur=128*2;
+        let largeur=64*2;
         this.stars=this.physics.add.group();
         for(let posX=largeur/2;posX<largeur*7;posX+=largeur){
             this.stars.create(posX ,0,"star");
@@ -26,7 +26,7 @@ class Tableau06 extends Tableau{
         //notre monstre
         this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-70,"monster-violet");
         this.monstre.setOrigin(0,0);
-        this.monstre.setDisplaySize(128,128);
+        this.monstre.setDisplaySize(100,100);
         this.monstre.setCollideWorldBounds(true);
         this.monstre.setBounce(1);
         this.monstre.setVelocityX(50);
