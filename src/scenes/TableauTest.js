@@ -2,7 +2,8 @@ class Tableau00 extends Tableau{
 
     preload() {
         super.preload();
-        this.load.image('star', 'assets/star.png');
+        this.load.image('monster-violet', 'assets/monster-violet.png');
+        this.load.image('monster-fly', 'assets/monster-fly.png');
     }
     create() {
         super.create();
@@ -20,11 +21,20 @@ class Tableau00 extends Tableau{
         this.star3.setCollideWorldBounds(true);
         this.star3.setBounce(1);
 
-        //quand le joueur touche une étoile on appelle la fonction ramasserEtoile
-        this.physics.add.overlap(this.player, this.star1, this.ramasserEtoile, null, this);
-        this.physics.add.overlap(this.player, this.star2, this.ramasserEtoile, null, this);
-        this.physics.add.overlap(this.player, this.star3, this.ramasserEtoile, null, this);
-
+          //monstre terrestre
+        this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-70,"monster-violet");
+        this.monstre.setOrigin(0,0);
+        this.monstre.setDisplaySize(100,100);
+        this.monstre.setCollideWorldBounds(true);
+        this.monstre.setBounce(1);
+        this.monstre.setVelocityX(50);
+        this.physics.add.overlap(this.player, this.monstre, this.hitSpike, null, this);
+        
+        
+        
+        //monstre aérien
+         new MonsterFly(this,400,100);
+        new MonsterFly(this,600,100);
     }
 
 }
