@@ -1,4 +1,4 @@
- class Monster-jump extends ObjetEnnemi{
+ class Monsterjump extends ObjetEnnemi{
     /**
      *
      * @param {Tableau} scene
