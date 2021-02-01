@@ -1,4 +1,4 @@
- class Monsterjump extends ObjetEnnemi{
+ class Monsterblack extends ObjetEnnemi{
     /**
      *
      * @param {Tableau} scene
@@ -6,7 +6,7 @@
      * @param y
      */
     constructor(scene, x, y) {
-        super(scene, x, y, "Monster-jump");
+        super(scene, x, y, "Monsterblack");
         //pas de gravité
         this.body.allowGravity=false;
  
