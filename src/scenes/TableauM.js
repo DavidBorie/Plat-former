@@ -35,34 +35,15 @@ class TableauM extends Tableau{
         this.physics.add.overlap(this.player, this.monstre, this.hitSpike, null, this);
         }
     
-    
-        this.physics.add.overlap(this.player, this.stars, this.ramasserEtoile, null, this);
-
-        //plateformes
-        this.platforms=this.physics.add.group();
-        for(let i=1 ;i<=3;i++){
-            let plateforme=this.platforms.create(largeur*i ,i*64+150,"ground");
-            plateforme.setOrigin(0,0);
-            plateforme.setDisplaySize(100,8);
-            plateforme.body.allowGravity=false;
-            plateforme.setBounceX(1);
-            plateforme.setCollideWorldBounds(true);
-            plateforme.setVelocityX(100)
-            plateforme.setImmovable(true);
-            plateforme.setFriction(1);
+         //notre monstre
+        this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-70,"monster-violet");
+        this.monstre.setOrigin(0,0);
+        this.monstre.setDisplaySize(200,100);
+        this.monstre.setCollideWorldBounds(true);
+        this.monstre.setBounce(1);
+        this.monstre.setVelocityX(50);
+        this.physics.add.overlap(this.player, this.monstre, this.hitSpike, null, this);
         }
-
-        //le joueur rebondit sur les plateformes
-        this.physics.add.collider(this.player,this.platforms);
-
-        //nos monstres volants
-        new MonsterFly(this,400,100);
-        new MonsterFly(this,600,100);
-
-
-
-    }
-
-
-
+       
+        
 }
