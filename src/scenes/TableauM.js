@@ -4,7 +4,7 @@ class TableauM extends Tableau{
         super.preload();
         this.load.image('star', 'assets/star.png');
         this.load.image('monster-violet', 'assets/monster-violet.png');
-         this.load.image('monster-fly', 'assets/monster-fly.png');
+         this.load.image('monster-fly', 'assets/monsterblack.png');
 
 
     }
@@ -36,7 +36,7 @@ class TableauM extends Tableau{
         }
     
          //notre monstre
-        this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-70,"monster-violet");
+        this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-70,"monster-black");
         this.monstre.setOrigin(0,0);
         this.monstre.setDisplaySize(200,100);
         this.monstre.setCollideWorldBounds(true);
