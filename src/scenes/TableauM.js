@@ -53,7 +53,7 @@ class TableauM extends Tableau{
         this.monstre.setOrigin(0,0);
         this.monstre.setDisplaySize(70,70);
         this.monstre.setCollideWorldBounds(true);
-        this.monstre.setBounce(5);
+        this.monstre.setBounce(3);
         this.monstre.setVelocityX(70);
         this.physics.add.overlap(this.player, this.monstre, this.hitSpike, null, this);
         
