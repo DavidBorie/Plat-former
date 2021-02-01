@@ -4,6 +4,8 @@ class TableauM extends Tableau{
         super.preload();
         this.load.image('star', 'assets/star.png');
         this.load.image('monster-violet', 'assets/monster-violet.png');
+         this.load.image('monster-fly', 'assets/monster-fly.png');
+
 
     }
     create() {
@@ -32,7 +34,8 @@ class TableauM extends Tableau{
         this.monstre.setVelocityX(50);
         this.physics.add.overlap(this.player, this.monstre, this.hitSpike, null, this);
 
-
+         //nos monstres volants
+        new MonsterFly(this,600,100);
 
     }
 
