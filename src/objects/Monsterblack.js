@@ -25,3 +25,6 @@
         this.y=this.minY;
         this.alpha=0;
         let me=this;
+
+    }
+ }
