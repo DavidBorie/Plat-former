@@ -3,11 +3,11 @@ class TableauM extends Tableau{
     preload() {
         super.preload();
         this.load.image('star', 'assets/star.png');
-        this.load.image('monster-mouvant', 'assets/monster-mouvant.png');
-        this.load.image('monster-sautant', 'assets/monster-sautant.png');
-        this.load.image('monster-immobile', 'assets/monster-immobile.png');
-        this.load.image('monster-volant', 'assets/monster-volant.png');
-        this.load.image('monster-rapide', 'assets/monster-rapide.png');
+        this.load.image('monster-mouvant', 'assets/monster_mouvant.png');
+        this.load.image('monster-sautant', 'assets/monster_sautant.png');
+        this.load.image('monster-immobile', 'assets/monster_immobile.png');
+        this.load.image('monster-volant', 'assets/monster_volant.png');
+        this.load.image('monster-rapide', 'assets/monster_rapide.png');
 
         //this.load.image('monster-fly2', 'assets/monster-fly2.png');
 
