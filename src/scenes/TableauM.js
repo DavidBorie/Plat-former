@@ -67,8 +67,8 @@ class TableauM extends Tableau{
         this.physics.add.overlap(this.player, this.monstre, this.hitSpike, null, this);
         
         
-        new MonsterFly(this,400,0);
-        new MonsterFly2(this,600,50);
+        new MonsterVolant(this,400,0);
+        new MonsterVolant(this,600,50);
         
      /*
         this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-70,"monster-violet");
