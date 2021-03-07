@@ -70,6 +70,7 @@ class TableauM extends Tableau{
         new MonsterFly(this,400,0);
         new MonsterFly2(this,600,50);
         
+     /*
         this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-70,"monster-violet");
         this.monstre.setOrigin(0,0);
         this.monstre.setDisplaySize(64,64);
@@ -77,7 +78,7 @@ class TableauM extends Tableau{
         this.monstre.setBounce(1);
         this.monstre.setVelocityX(50);
         this.physics.add.overlap(this.player, this.monstre, this.hitSpike, null, this);
-        
+        //*
     }
 
 }
