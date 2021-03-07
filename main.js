@@ -1,4 +1,3 @@
-
 let width=14*64; //896;
 let height=7*64; //448;
 
@@ -10,7 +9,7 @@ let config = {
         default: 'arcade',
         arcade: {
             gravity: { y: 100*3 },
-            debug: true,
+            debug: false,
         }
     },
     scene: [
@@ -26,6 +25,7 @@ let config = {
         new Tableau06("Un monstre!"),
         new Tableau07("Un monstre volant!"),
         new Tableau08("Un plateau qui sort du cadre"),
+
 
     ],
     width: width,
@@ -70,7 +70,6 @@ function resize() {
         canvas.style.width = width + "px";
         canvas.style.height = height + "px";
     }
-
      */
 
 }
