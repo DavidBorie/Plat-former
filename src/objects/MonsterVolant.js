@@ -1,4 +1,4 @@
-class MonsterFly extends ObjetEnnemi{
+class MonsterVolant extends ObjetEnnemi{
     /**
      * Un monstre qui vole et fait des allez -retours
      * @param {Tableau} scene
