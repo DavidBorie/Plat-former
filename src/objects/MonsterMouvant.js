@@ -1,4 +1,4 @@
-class MonsterSol extends ObjetEnnemi{
+class MonsterMouvant extends ObjetEnnemi{
     /**
      *
      * @param {Tableau} scene
@@ -6,7 +6,7 @@ class MonsterSol extends ObjetEnnemi{
      * @param y
      */
     constructor(scene, x, y) {
-        super(scene, x, y, "oni");
+        super(scene, x, y, "monstre-mouvant");
         //pas de gravité
         this.body.allowGravity=false;
         this.setCollideWorldBounds(true);
