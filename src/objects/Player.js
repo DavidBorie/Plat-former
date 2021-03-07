@@ -6,8 +6,9 @@ class Player extends Phaser.Physics.Arcade.Sprite{
 
         this.setCollideWorldBounds(true)
         this.setBounce(0.3);
-        this.setGravityY(700)
+        this.setGravityY(1200)
         this.setFriction(1,1);
+        
 
         this.setBodySize(this.body.width-6,this.body.height-10);
         this.setOffset(3, 10);
@@ -33,7 +34,6 @@ class Player extends Phaser.Physics.Arcade.Sprite{
 
         this._directionX=0;
         this._directionY=0;
-
 
     }
 
@@ -61,12 +61,12 @@ class Player extends Phaser.Physics.Arcade.Sprite{
 
         switch (true){
             case this._directionX<0:
-                this.setVelocityX(-160);
+                this.setVelocityX(-170);
                 this.anims.play('left', true);
                 break;
             case this._directionX>0:
 
-                this.setVelocityX(160);
+                this.setVelocityX(170);
                 this.anims.play('right', true);
                 break;
             default:
