@@ -16,7 +16,7 @@ let config = {
         new Ui(),
         
         
-        new TableauSidescroller("Test scroller/monstre")
+        new TableauSidescroller("Test scroller/monstre"),
         new TableauM("test de monstre"),
         new Tableau00("Des étoiles"),
         new Tableau01("Des plateformes"),
