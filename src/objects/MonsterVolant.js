@@ -1,35 +1,34 @@
-class MonsterVolant extends ObjetEnnemi{
+class MonsterFly extends ObjetEnnemi{
     /**
-     *
+     * Un monstre qui vole et fait des allez -retours
      * @param {Tableau} scene
      * @param x
      * @param y
      */
     constructor(scene, x, y) {
-        super(scene, x, y, "MonsterVolant");
+        super(scene, x, y, "yokai");
         //pas de gravité
         this.body.allowGravity=false;
 
-        //gestion de la taille
+        //gestion de la taille...car attention notre png est très grand (et c'est maaaaal car pas optimisé)
         this.setDisplaySize(64,64);
 
         //on réduit un peu la zone de hit
-        this.setBodySize(this.body.width-400,this.body.height-400);
-        this.setOffset(150, 250);
-
+        this.setBodySize(this.body.width-32,this.body.height-32);
+    
         //définir les propriété que l'on va utiliser dans notre animation
 
         // X
         this.originalX=x;
-        this.minX=x-200;
-        this.maxX=x+200;
+        this.minX=x-0;
+        this.maxX=x+600;
 
         // Y
         this.originalY=y;
-        this.minY=y-5;
-        this.maxY=y+5;
+        this.minY=y-25;
+        this.maxY=y+25;
 
-        // on applique les propriété du début de l'animation
+        // on applique les propriétés du début de l'animation
         this.x=this.minX;
         this.y=this.minY;
         this.alpha=0;
@@ -67,8 +66,8 @@ class MonsterVolant extends ObjetEnnemi{
             },
             y: {
                 from: this.minY,
-                to:this.maxY,
-                duration: 500,
+                to:this.maxY-30,
+                duration: 1000,
                 ease: 'Sine.easeInOut',
                 yoyo: -1,
                 repeat:-1
