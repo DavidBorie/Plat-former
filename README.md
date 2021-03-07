@@ -1,1 +1,1 @@
- https://DavidBorie.github.io/Platformer/.
+https://davidborie.github.io/Platformer/
