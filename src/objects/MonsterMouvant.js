@@ -66,7 +66,7 @@ class MonsterMouvant extends ObjetEnnemi{
         //fait changer de sens
         if(this.body){
             if(this.body.velocity.x<0){
-                this.flipX=false;
+                this.flipX=true;
             }else{
                 this.flipX=true;
             }
