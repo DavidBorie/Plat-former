@@ -58,11 +58,12 @@ class MonsterMouvant extends ObjetEnnemi{
                 yoyo: -1,
                 repeat:-1
                
-            }
+           }
         });
     }
+
     update(){
-        
+        //fait changer de sens
         if(this.body){
             if(this.body.velocity.x<0){
                 this.flipX=false;
