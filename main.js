@@ -15,7 +15,7 @@ let config = {
     scene: [
         new Ui(),
         
-        
+        new TableauTiled("Big Level!"),
         new TableauM("test de monstre"),
         new Tableau00("Des étoiles"),
         new Tableau01("Des plateformes"),
