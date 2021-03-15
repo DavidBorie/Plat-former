@@ -1,4 +1,4 @@
-class MonsterFly extends ObjetEnnemi{
+class MonsterMouvant extends ObjetEnnemi{
     /**
      *
      * @param {Tableau} scene
@@ -6,28 +6,22 @@ class MonsterFly extends ObjetEnnemi{
      * @param y
      */
     constructor(scene, x, y) {
-        super(scene, x, y, "monster-fly");
+        super(scene, x, y, "monstre-mouvant");
         //pas de gravité
         this.body.allowGravity=false;
-
-        //gestion de la taille
-        this.setDisplaySize(64,64);
-
-        //on réduit un peu la zone de hit
-        this.setBodySize(this.body.width-400,this.body.height-400);
-        this.setOffset(150, 250);
-
-        //définir les propriété que l'on va utiliser dans notre animation
+        this.setCollideWorldBounds(true);
+        this.setBodySize(this.body.width-20,this.body.height-15);
+//définir les propriété que l'on va utiliser dans notre animation
 
         // X
         this.originalX=x;
-        this.minX=x-200;
-        this.maxX=x+200;
+        this.minX=x-20;
+        this.maxX=x+650;
 
         // Y
         this.originalY=y;
-        this.minY=y-5;
-        this.maxY=y+5;
+        this.minY=y -64;
+        this.maxY=height-128;
 
         // on applique les propriété du début de l'animation
         this.x=this.minX;
@@ -40,7 +34,7 @@ class MonsterFly extends ObjetEnnemi{
         scene.tweens.add({
                 targets:this,
                 duration:200,
-                delay:Math.random()*1000,
+                delay:Math.random()*3000,
                 alpha:{
                     startDelay:Math.random()*5000,
                     from:0,
@@ -59,21 +53,26 @@ class MonsterFly extends ObjetEnnemi{
             x: {
                 from: this.minX,
                 to:this.maxX,
-                duration: 10*1000,
-                ease: 'Sine.easeInOut',
-                yoyo: -1,
-                repeat:-1,
-                flipX:true,
-            },
-            y: {
-                from: this.minY,
-                to:this.maxY,
-                duration: 500,
+                duration: 5000,
                 ease: 'Sine.easeInOut',
                 yoyo: -1,
                 repeat:-1
-            }
+               
+           }
         });
     }
+
+    update(){
+        //fait changer de sens
+        if(this.body){
+            if(this.body.velocity.x<0){
+                this.flipX=true;
+            }else{
+                this.flipX=true;
+            }
+        }
+
+    }
+
 
 }

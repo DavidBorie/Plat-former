@@ -3,11 +3,11 @@ class TableauM extends Tableau{
     preload() {
         super.preload();
         this.load.image('star', 'assets/star.png');
-        this.load.image('monster-mouvant', 'assets/monster-mouvant.png');
-        this.load.image('monster-sautant', 'assets/monster-sautant.png');
-        this.load.image('monster-immobile', 'assets/monster-immobile.png');
-        this.load.image('monster-volant', 'assets/monster-volant.png');
-        this.load.image('monster-rapide', 'assets/monster-rapide.png');
+        this.load.image('monster-mouvant', 'assets/monster_mouvant.gif');
+        this.load.image('monster-sautant', 'assets/monster_sautant.png');
+        this.load.image('monster-immobile', 'assets/monster_immobile.png');
+        this.load.image('monster-volant', 'assets/monster_volant.png');
+        this.load.image('monster-rapide', 'assets/monster_rapide.png');
 
         //this.load.image('monster-fly2', 'assets/monster-fly2.png');
 
@@ -67,11 +67,10 @@ class TableauM extends Tableau{
         this.physics.add.overlap(this.player, this.monstre, this.hitSpike, null, this);
         
         
-        new MonsterFly(this,400,100);
-        new MonsterZombie(this,600,400);
-        //new MonsterFly(this,400,0);
-        //new MonsterFly2(this,600,50);
-        /*
+        new MonsterVolant(this,400,0);
+        new MonsterVolant(this,600,50);
+        
+     /*
         this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-70,"monster-violet");
         this.monstre.setOrigin(0,0);
         this.monstre.setDisplaySize(64,64);
