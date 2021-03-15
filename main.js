@@ -25,7 +25,6 @@ let config = {
         new Tableau06("Un monstre!"),
         new Tableau07("Un monstre volant!"),
         new Tableau08("Un plateau qui sort du cadre"),
-        new TableauTiled("Big Level!"),
 
 
     ],
