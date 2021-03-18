@@ -84,7 +84,7 @@ class TableauTiled extends Tableau{
         this.flyingMonstersObjects = this.map.getObjectLayer('flyingMonsters')['objects'];
         // On crée des montres volants pour chaque objet rencontré
         this.flyingMonstersObjects.forEach(monsterObject => {
-            let monster=new MonsterFly(this,monsterObject.x,monsterObject.y);
+            let monster= new MonsterFly(this,monsterObject.x,monsterObject.y);
             monstersContainer.add(monster);
         });
 
