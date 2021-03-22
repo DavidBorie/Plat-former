@@ -1,17 +1,23 @@
 class TableauTiled extends Tableau{
-
-
-
+    /**
+     * Ce tableau démontre comment se servir de Tiled, un petit logiciel qui permet de designer des levels et de les importer dans Phaser (entre autre).
+     *
+     * Ce qui suit est très fortement inspiré de ce tuto :
+     * https://stackabuse.com/phaser-3-and-tiled-building-a-platformer/
+     *
+     * Je vous conseille aussi ce tuto qui propose quelques alternatives (la manière dont son découpées certaines maisons notamment) :
+     * https://medium.com/@michaelwesthadley/modular-game-worlds-in-phaser-3-tilemaps-1-958fc7e6bbd6
+     */
     preload() {
         super.preload();
         // ------pour TILED-------------
         // nos images
-        this.load.image('tiles', 'assets/Tilemaps/tableauTiledTileset.png');
+        this.load.image('tiles', 'assets/tilemaps/tableauTiledTileset.png');
         //les données du tableau qu'on a créé dans TILED
-        this.load.tilemapTiledJSON('map', 'assets/Tiledmaps/TableauTiled.json');
+        this.load.tilemapTiledJSON('map', 'assets/tilemaps/tableauTiled.json');
 
         // -----et puis aussi-------------
-        this.load.image('monster-fly', 'assets/Monsterfly.png');
+        this.load.image('monster-fly', 'assets/monster-fly.png');
         this.load.image('night', 'assets/night.jpg');
         //atlas de texture généré avec https://free-tex-packer.com/app/
         //on y trouve notre étoiles et une tête de mort
@@ -40,9 +46,6 @@ class TableauTiled extends Tableau{
         //---- ajoute les plateformes simples ----------------------------
 
         this.solides = this.map.createLayer('solides', this.tileset, 0, 0);
-   
-   
-   
         this.lave = this.map.createLayer('lave', this.tileset, 0, 0);
         this.derriere = this.map.createLayer('derriere', this.tileset, 0, 0);
         this.devant = this.map.createLayer('devant', this.tileset, 0, 0);
@@ -84,7 +87,7 @@ class TableauTiled extends Tableau{
         this.flyingMonstersObjects = this.map.getObjectLayer('flyingMonsters')['objects'];
         // On crée des montres volants pour chaque objet rencontré
         this.flyingMonstersObjects.forEach(monsterObject => {
-            let monster= new MonsterFly(this,monsterObject.x,monsterObject.y);
+            let monster=new MonsterFly(this,monsterObject.x,monsterObject.y);
             monstersContainer.add(monster);
         });
 
