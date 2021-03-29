@@ -16,7 +16,6 @@ let config = {
         new Ui(),
         
         new TableauM("test de monstre"),
-        new tile("Tiled level"),
         new Tableau00("Des étoiles"),
         new Tableau01("Des plateformes"),
         new Tableau02("Plein d'étoiles"),
