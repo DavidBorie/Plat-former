@@ -12,7 +12,6 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         this.setBodySize(this.body.width-6,this.body.height-3);
         this.setOffset(3, 3);
         this.jumping = false;  
-
         
         
         /********** On définit les animations du joueur **********/
@@ -87,17 +86,17 @@ class Player extends Phaser.Physics.Arcade.Sprite{
             switch (true)
             {
                 case this._directionX < 0 && !this.jumping:
-                    this.setVelocityX(-170);
+                    this.setVelocityX(-160);
                     this.anims.play('left', true);
                     break;
     
                 case this._directionX > 0 && !this.jumping:
-                    this.setVelocityX(170);
+                    this.setVelocityX(160);
                     this.anims.play('right', true);
                     break;
     
                 case this._directionX < 0 && this.jumping:
-                    this.setVelocityX(-0);
+                    this.setVelocityX(-160);
                     this.anims.play('jumpLeft', true);
                     break;
                 
@@ -107,7 +106,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
                     break;
     
                 default:
-                    this.setVelocityX(-550);
+                    this.setVelocityX(0);
                     this.anims.play('turn', true);
             }
             
@@ -129,6 +128,8 @@ class Player extends Phaser.Physics.Arcade.Sprite{
     }
 
 }
+    
+
     
     
             
