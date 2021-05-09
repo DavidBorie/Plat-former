@@ -6,7 +6,7 @@ class MonsterVolant extends ObjetEnnemi{
      * @param y
      */
     constructor(scene, x, y) {
-        super(scene, x, y, "MonstreVolant");
+        super(scene, x, y, "monster-volant");
         //pas de gravité
         this.body.allowGravity=false;
 

@@ -6,7 +6,7 @@ class TableauM extends Tableau{
         this.load.image('monster-mouvant', 'assets/monster_mouvant.gif');
         this.load.image('monster-sautant', 'assets/monster_sautant.png');
         this.load.image('monster-immobile', 'assets/monster_immobile.png');
-        this.load.image('monster-volant', 'assets/monster_volant.png');
+        this.load.image('monster-volant', 'assets/monsterfly.png');
         this.load.image('monster-rapide', 'assets/monster_rapide.png');
 
         //this.load.image('monster-fly2', 'assets/monster-fly2.png');
