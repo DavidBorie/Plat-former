@@ -98,11 +98,11 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         scene.physics.add.existing(this)
 
         this.setCollideWorldBounds(true);
-        this.setBounce(0);
+        this.setBounce(7);
         this.setGravityY(700);
         this.setFriction(1,1);
 
-        this.setBodySize(this.body.width-6,this.body.height-3);
+        this.setBodySize(this.body.width-12,this.body.height-3);
         this.setOffset(3, 3);
         this.jumping = false;
 
