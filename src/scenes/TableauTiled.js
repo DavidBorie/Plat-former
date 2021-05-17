@@ -54,7 +54,6 @@ create() {
 
         //quoi collide avec quoi?
         this.physics.add.collider(this.player, this.solides);
-        this.player.setDepth(100);
 
         /*
         this.map = this.make.tilemap({ key: 'map' });
@@ -73,7 +72,8 @@ create() {
         this.solides.setDepth(z--);
         this.lave.setDepth(z--);
         this.derriere.setDepth(z--);
-        this.player.setDepth(z--);
+        this.eau.setDepth(z--);
+        this.player.setDepth(100);
     }
   
 
