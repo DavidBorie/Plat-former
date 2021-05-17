@@ -70,6 +70,9 @@ create() {
         this.physics.add.collider(this.player, this.star1);
         this.physics.add.collider(this.star1, this.platforms);
 */
+        this.player.setDepth(z--);
+        this.derriere.setDepth(z--);
     }
+  
 
 }
